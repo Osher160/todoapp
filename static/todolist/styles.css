@@ -1,5 +1,5 @@
 body {
-	background: #fcff33;
+	background: #3399ff;
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
@@ -22,7 +22,7 @@ body {
 }
 .todo-completed {
 	text-decoration: line-through;
-	background: rgba(255, 0, 85, 0.808);
+	background: rgba(72, 255, 0, 0.3);
 }
 footer {
 	margin-top: 20px;

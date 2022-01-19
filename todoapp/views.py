@@ -22,18 +22,19 @@ def addTodoItem(request):
         new_todo= todoapp(text=request.POST['text'])
         new_todo.save()
 
-
     return redirect("index")
     
-def completedTodo(request, todo_id):
-    todo=todoapp.objects.get(pk=todo_id)
-    todo.completed=True
+def completedTodo(request, todo_id) :
+    todo = todoapp.objects.get(pk=todo_id)
+    todo.complited=True
     todo.save()
 
     return redirect('index')
 
 def deletecompleted(request):
-    todoapp.objects.filter(completed__exact=True).delete()
+    todoapp.objects.filter(complited__exact=True).delete()
+
+    return redirect('index')
 
 def deleteall(request):
     todoapp.objects.all().delete()
